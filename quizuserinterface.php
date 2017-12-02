@@ -1,6 +1,7 @@
 <?php
-	session_start();
+	//session_start();
 	require_once("quizdata.php");
+	checkLogin();
 ?>
 <!DOCTYPE html>
 <html>

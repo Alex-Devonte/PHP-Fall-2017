@@ -1,5 +1,5 @@
 <?php
-	//session_start();
+	session_start();
 	require_once("connect.php");
 	require_once("quiz.php");
 	
@@ -20,5 +20,17 @@
 		{
 			$_SESSION['instructor-email'] = null;
 		}
+	}
+	
+	function checkLogin()
+	{
+		if (!isset($_SESSION['student-email']))
+		{
+			//Redirect user to login page if they aren't signed in
+			$_SESSION['message'] = "You must be logged in to access that page.";
+			header("Location: login.php");
+			exit();
+		}
+		$_SESSION['message'] = "";
 	}
 ?>

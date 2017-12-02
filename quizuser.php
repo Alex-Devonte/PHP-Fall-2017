@@ -11,6 +11,7 @@
 		<form name="quiz-form" action="results.php" method="POST">
 			<?php
 				require_once("quizdata.php");
+				checkLogin();
 				//Display questions and answers
 				echo "<ol>";
 				$index = 1;
