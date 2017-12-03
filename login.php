@@ -26,7 +26,7 @@
 			}
 			else
 			{
-				echo "BAD";
+				echo "Username/Password is incorrect";
 			}
 		}
 	}
